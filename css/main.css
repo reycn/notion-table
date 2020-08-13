@@ -1,0 +1,72 @@
+body {
+    background-color: #fafafa;
+    padding: 2em;
+    margin-top: -1.5em;
+    line-height: 2em;
+}
+
+h1 a {
+    color: #000;
+}
+
+#content input {
+    line-height: 2.5em;
+    width: 2em;
+    border: 0px;
+    border-radius: 5px;
+    padding-left: 1em;
+    background-color: #eee;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    color: #2980b9;
+}
+
+#content .copied_message {
+    font-size: 0.8em;
+    line-height: 0.8em;
+    background-color: #27ae60;
+    color: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 0.4em;
+}
+
+.info p {
+    text-align: right;
+    font-size: 0.8em;
+    color: #aaa;
+    line-height: 0.4em;
+}
+
+.info a {
+    color: #aaa;
+}
+
+.code {
+    font-family: Consolas, Monaco, monospace;
+    word-wrap: break-word;
+    background-color: #333;
+    font-size: 0.8em;
+    color: #ccc;
+    padding: 1em;
+    line-height: 2em;
+    font-family: Consolas, Monaco, monospace;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .5s;
+}
+
+.fade-enter,
+.fade-leave-to
+/* .fade-leave-active below version 2.1.8 */
+
+{
+    opacity: 0;
+}
