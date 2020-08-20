@@ -7,7 +7,8 @@ import {
   Switch,
   Icon,
   Row,
-  Alert
+  Alert,
+  Col
 }
 from 'ant-design-vue';
 import VueKatex from 'vue-katex';
@@ -17,6 +18,7 @@ Vue.use(Button);
 Vue.use(InputNumber);
 Vue.use(Switch);
 Vue.use(Icon);
+Vue.use(Col);
 Vue.use(Row);
 Vue.use(Alert);
 

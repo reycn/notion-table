@@ -4,11 +4,10 @@
     <h2>Options</h2>
     <div id="options">
       Columns:
-      {{col}}
+      <!-- {{col}} -->
       <a-input-number id="col" v-model="col" :min="1" @change="onChange" defaultValue="3" />
-      <br />
-      Rows:
-      {{row}}
+      <br />Rows:
+      <!-- {{row}} -->
       <a-input-number id="row" v-model="row" :min="1" @change="onChange" defaultValue="4" />
       <br />Bold head:
       <a-switch default-unchecked v-model="bold_head">
@@ -20,13 +19,12 @@
         <a-icon slot="checkedChildren" type="check" />
         <a-icon slot="unCheckedChildren" type="close" />
       </a-switch>
-
       <br />
-      <a-button type="primary" icon="copy">Copy</a-button>
+      <a-button type="primary" icon="copy" @click="text_to_code">Copy</a-button>
     </div>
     <transition name="slide-fade">
       <a-alert
-        v-if="clicks"
+        v-show="show_msg"
         :message="copied_message"
         type="success"
         show-icon
@@ -35,12 +33,10 @@
     </transition>
     <hr align="center" width="100%" color="#eeeeee" size="1" />
     <h2>Preview</h2>
-    <!-- <div v-katex:auto>$${{ output }}$$</div> -->
     <katex-element :expression="output" />
     <hr align="center" width="100%" color="#eeeeee" size="1" />
     <h2>Code</h2>
-    <p class="code">{{ output }}</p>
-
+    <p class="code" v-html="code"></p>
     <hr align="right" width="100%" color="#eeeeee" size="1" />
     <info />
   </div>
@@ -50,55 +46,64 @@
 import info from './components/info.vue'
 
 export default {
-  name: 'App',
-  components: {
-    info
-  },
-  data () {
-    return {
-      col:3,
-      row:4,
-      text: 'Test',
-      code: "",
-      begin: '\\begin{array}',
-      end: '\\end{array}',
-      hline: '\\\\\\hline\n',
-      head: '',
-      line: '',
-      bold_head:false,
-      border: false,
-      copied_message: '',
-      clicks: false,
-      output: 'Message: the output is currently null!'
-    }
-  },
-  methods: {
-    onChange(value) {
-      console.log('changed', value);
+    name: 'App',
+    components: {
+        info
     },
+    data() {
+        return {
+            col: 3,
+            row: 4,
+            text: 'Test',
+            code: "",
+            begin: '\\begin{array}',
+            end: '\\end{array}',
+            hline: '\\\\\\hline\n    ',
+            head: '',
+            line: '',
+            bold_head: false,
+            border: false,
+            copied_message: 'Copied! Check the clipboard~',
+            show_msg: false,
+            output: 'Message: the output is currently null!'
+        }
+    },
+    methods: {
+        onChange(value) {
+            console.log('changed', value);
+        },
         text_to_code: function() {
             if (this.bold_head == true) {
-              if (this.border == true){
-                this.head = '{|' + ('c|').repeat(this.col) + '}' + this.hline.slice(2) + ('\\textbf{Col}&').repeat(this.col).slice(0, -1) + this.hline;
-              } else {
-                this.head = '{' + ('c').repeat(this.col) + '}' + this.hline.slice(2) + ('\\textbf{Col}&').repeat(this.col).slice(0, -1) + this.hline;}
-            } else {
-              if (this.border == true) {
-                this.head = '{|' + ('c|').repeat(this.col) + '}' + this.hline.slice(2) + ('\\text{Col}&').repeat(this.col).slice(0, -1) + this.hline;
+                if (this.border == true) {
+                    this.head = '{|' + ('c|').repeat(this.col) + '}' + this.hline.slice(2) + ('\\textbf{Col}&').repeat(this.col).slice(0, -1) + this.hline;
                 } else {
-                this.head = '{' + ('c').repeat(this.col) + '}' + this.hline.slice(2) + ('\\text{Col}&').repeat(this.col).slice(0, -1) + this.hline;}
+                    this.head = '{' + ('c').repeat(this.col) + '}' + this.hline.slice(2) + ('\\textbf{Col}&').repeat(this.col).slice(0, -1) + this.hline;
+                }
+            } else {
+                if (this.border == true) {
+                    this.head = '{|' + ('c|').repeat(this.col) + '}' + this.hline.slice(2) + ('\\text{Col}&').repeat(this.col).slice(0, -1) + this.hline;
+                } else {
+                    this.head = '{' + ('c').repeat(this.col) + '}' + this.hline.slice(2) + ('\\text{Col}&').repeat(this.col).slice(0, -1) + this.hline;
+                }
             }
             this.line = ('c&').repeat(this.col).slice(0, -1) + this.hline
-            this.output = this.begin + this.head + this.line.repeat(this.row) + this.end;
+            this.output = this.begin + this.head + this.line.repeat(this.row).slice(0, -4) + this.end;
+            this.code = this.output.split("\n    ").join("<br/>    ")
             // katex.render(this.output, document.getElementsByClassName('preview')[0], {
             //     throwOnError: false
             // });
 
             try {
-                this.copied_message = 'Copied!'
                 navigator.clipboard.writeText(this.output);
+                this.show_msg = true
+                setTimeout(() => {
+                    this.show_msg = false
+                }, 1000);
             } catch (err) {
                 this.copied_message = 'Failed to copy: ' + err
+                setTimeout(() => {
+                    this.show_msg = false
+                }, 1000);
                 console.error('Failed to copy: ', err);
             }
             // if (this.clicks) {
@@ -108,19 +113,15 @@ export default {
     watch: {
         col: function() {
             this.text_to_code();
-            this.clicks = true;
         },
         row: function() {
             this.text_to_code();
-            this.clicks = true;
         },
         bold_head: function() {
             this.text_to_code();
-            this.clicks = true;
         },
         border: function() {
             this.text_to_code();
-            this.clicks = true;
         }
     },
     mounted: function() {
@@ -132,7 +133,7 @@ export default {
 <style>
 /* @import "../node_modules/katex/dist/katex.min.css"; */
 body {
-  background: #f0f2f5;
+  background: #f2f3f5;
 }
 body h2 {
   color: #666;
@@ -151,33 +152,51 @@ body h2 {
   word-wrap: break-word;
   background-color: #001529;
   opacity: 0.8;
-  /* font-size: 0.8em; */
+  font-size: 0.8em;
   color: #eee;
-  margin: 0em 2em 0em;
+  /* margin: 0em 2em 0em; */
   padding: 1.5em;
   line-height: 2em;
   font-family: Consolas, Monaco, monospace;
 }
 #options {
   position: inline-block;
-  margin-right: 40%;
+  /* margin-right: 30%; */
   text-align: right;
   color: #777;
   font-size: 16px;
+  margin-left: -50%;
+  margin-right: 45%;
+  margin-top: 0;
+}
+/* 
+#options a-col {
+  margin: 1em 20% 1em;
+} */
+#options .ant-input-number {
+  color: #999;
+  text-align: right !important ;
+}
+#options .ant-input-number:hover {
+  color: #40a9ff;
+}
+#options .ant-switch:hover {
+  background-color: #999999;
 }
 
 .success_message {
-  margin: 2em 30% 2em;
+  margin: 0.5em 30% 1.5em;
+  text-align: center;
 }
 .slide-fade-enter-active {
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.14, 0.39, 0.9, 0.92);
 }
 .slide-fade-leave-active {
-  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+  transition: all 0.3s cubic-bezier(0.14, 0.39, 0.9, 0.92);
 }
 .slide-fade-enter, .slide-fade-leave-to
 /* .slide-fade-leave-active for below version 2.1.8 */ {
-  transform: translateX(10px);
+  transform: translateY(-10px);
   opacity: 0;
 }
 </style>

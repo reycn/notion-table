@@ -35,7 +35,6 @@ a {
 .info {
   text-align: right;
   line-height: 0.8em;
-  margin: 1em 0em 0em;
-  padding: 0em 1em 0em;
+  margin: 1em 2em 0em;
 }
 </style>
