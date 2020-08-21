@@ -9,7 +9,10 @@
           </p>
         </template>
         <a href="https://notion.so/">
-          <img src="/logo.png" class="rotate-icon" />
+          <img
+            src="https://cdn.jsdelivr.net/gh/reycn/notion-table/dist/logo.png"
+            class="rotate-icon"
+          />
         </a>
       </a-popover>Table Generator
     </h1>
