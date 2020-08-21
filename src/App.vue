@@ -179,7 +179,7 @@ export default {
             
             this.table_data = Object.assign(this.table_data.map(add_attr))
             this.attrs = Object.keys(this.table_data[0]).filter(v => v !== '$id')
-            console.log(this.attrs)
+            // console.log(this.attrs)
             // this.json_to_code();
         this.refresh = false;
         setTimeout(() => {
@@ -199,7 +199,7 @@ export default {
           // console.log( typeof(this.table_data.map(del_attr)))
           this.table_data = Object.assign(this.table_data.map(del_attr))
           this.attrs = Object.keys(this.table_data[0]).filter(v => v !== '$id')
-          console.log(this.attrs)
+          // console.log(this.attrs)
           
         this.refresh = false;
         setTimeout(() => {
