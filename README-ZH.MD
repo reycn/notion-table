@@ -18,14 +18,14 @@
 
 ## 截图
 - 界面:  
-![](https://github.com/reycn/notion-table/blob/master/img/preview.png?raw=true)  
+![](https://github.com/reycn/notion-table/blob/master/img/preview.jpg?raw=true)  
   
 - Notion 效果:  
-![](https://github.com/reycn/notion-table/blob/master/img/notion.png?raw=true)  
+![](https://github.com/reycn/notion-table/blob/master/img/notion.jpg?raw=true)  
 
 ## 捐赠
 衷心感谢您的帮助。 😀
-![](https://github.com/reycn/notion-table/blob/master/img/donation.jpg?raw=true)  
+![](https://github.com/reycn/notion-table/blob/master/img/donate.jpg?raw=true)  
 
 ## 依赖
 - [Vue](https://github.com/vuejs/vue)
