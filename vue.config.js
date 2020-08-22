@@ -5,8 +5,6 @@ module.exports = {
       externals: {
          'vue-router': 'VueRouter',
          'Vuex': 'Vuex',
-         'axios': 'axios',
-         'moment': 'moment'
       },
    },
    outputDir: 'dist',
