@@ -28,8 +28,10 @@
 ![](https://github.com/reycn/notion-table/blob/master/img/donate.jpg?raw=true)  
 
 ## 依赖
-- [Vue](https://github.com/vuejs/vue)
-- [KaTex](https://github.com/KaTeX/KaTeX)
+- 前端框架: [Vue](https://github.com/vuejs/vue)
+- KaTeX 渲染: [vue-katex](https://github.com/lucpotage/vue-katex)
+- 表格编辑器: [vue-excel-editor](https://github.com/cscan/vue-excel-editor)
+- 界面元素: [ant-design-vue](https://github.com/vueComponent/ant-design-vue)
 
 --- 
 查看更多信息？你可能想看看 [作者的博客](https://quoth.win/).  

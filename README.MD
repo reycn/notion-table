@@ -20,8 +20,10 @@ I would appreciate your support. 😀
 ![](https://github.com/reycn/notion-table/blob/master/img/donate.jpg?raw=true)  
 
 ## Dependencies
-- [Vue](https://github.com/vuejs/vue)
-- [KaTex](https://github.com/KaTeX/KaTeX)
+- Framemwork: [Vue](https://github.com/vuejs/vue)
+- KaTeX rendering: [vue-katex](https://github.com/lucpotage/vue-katex)
+- Table editor: [vue-excel-editor](https://github.com/cscan/vue-excel-editor)
+- UI elements: [ant-design-vue](https://github.com/vueComponent/ant-design-vue)
 
 --- 
 To find more information? You may want to see [the author's blog](https://quoth.win/).  
