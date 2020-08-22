@@ -16,4 +16,4 @@ jobs:
           BASE_BRANCH: master # The branch the action should deploy from.
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: dist # The folder the action should deploy.
-          BUILD_SCRIPT: yarn install && yarn run build --report && echo 'tabgh.quoth.win' > ./dist/CNAME
+          BUILD_SCRIPT: yarn install && yarn run deploy && echo 'tabgh.quoth.win' > ./dist/CNAME
