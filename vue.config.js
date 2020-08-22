@@ -4,9 +4,11 @@ module.exports = {
       // CDN 加载组件
       externals: {
          'vue-router': 'VueRouter',
-         Vuex: 'Vuex',
-         axios: 'axios',
-         moment: 'moment'
-      }
-   }
+         'Vuex': 'Vuex',
+         'axios': 'axios',
+         'moment': 'moment'
+      },
+   },
+   outputDir: 'dist',
+   publicPath: process.env.NODE_ENV === 'production' ? '/notion-table/' : '/'
 }
