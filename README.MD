@@ -16,7 +16,7 @@ This tool is used to enhancing notion writting experience.
 ![](https://github.com/reycn/notion-table/blob/master/img/notion.jpg?raw=true)  
 
 ## Donation
-I would appreciate your support. 😀
+I would appreciate your support. 😀  
 ![](https://github.com/reycn/notion-table/blob/master/img/donate.jpg?raw=true)  
 
 ## Dependencies
