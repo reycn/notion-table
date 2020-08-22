@@ -9,6 +9,7 @@
 # Notion 表格生成器 [[English]](https://github.com/reycn/notion-table/blob/master/README.MD)
 本工具为提高 Notion 表格编辑体验而生。  
 ## [🎈 立即使用！](https://tab.quoth.win/)  
+[![Build and Deploy](https://github.com/reycn/notion-table/workflows/Build%20and%20Deploy/badge.svg)](https://github.com/reycn/notion-table/actions)   
 
 
 ## 特性
