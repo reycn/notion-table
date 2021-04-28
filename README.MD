@@ -13,11 +13,12 @@ This tool is used to enhancing notion writting experience.
 - Customizable style
 - Instant preview & copying
 - Two-way data binding
+- Responsive design
 
 ## Screenshots
 
 - Interface:
-  ![](https://github.com/reycn/notion-table/blob/master/img/preview.jpg?raw=true)
+  ![](https://github.com/reycn/notion-table/blob/master/img/preview.png?raw=true)
 - Result in notion:
   ![](https://github.com/reycn/notion-table/blob/master/img/notion.jpg?raw=true)
 

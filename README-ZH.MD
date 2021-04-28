@@ -22,11 +22,12 @@
 - 自定义的表格样式
 - 目标表格的实时预览和实时复制
 - 双向数据绑定
+- 自适应布局
 
 ## 截图
 
 - 界面:
-  ![](https://github.com/reycn/notion-table/blob/master/img/preview.jpg?raw=true)
+  ![](https://github.com/reycn/notion-table/blob/master/img/preview.png?raw=true)
 - Notion 效果:
   ![](https://github.com/reycn/notion-table/blob/master/img/notion.jpg?raw=true)
 
