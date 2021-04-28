@@ -27,7 +27,7 @@
 ## 截图
 
 - 界面:
-  ![](https://github.com/reycn/notion-table/blob/master/img/preview.png?raw=true)
+  ![](https://cdn.jsdelivr.net/gh/reycn/notion-table/img/preview.png)
 - Notion 效果:
   ![](https://github.com/reycn/notion-table/blob/master/img/notion.jpg?raw=true)
 
