@@ -71,7 +71,7 @@
             </button>
           </div>
         </div>
-        <div id="editable">
+        <div id="editable" v-if="refresh">
           <transition name="slide-fade">
             <vue-excel-editor
               ref="grid"
@@ -121,7 +121,11 @@
           <div class="tutorial">
             Type <span class="code">/eq</span> to insert an equation
           </div>
-          <katex-element class="preview-katex" :expression="code" />
+          <katex-element
+            v-if="refresh"
+            class="preview-katex"
+            :expression="code"
+          />
         </div>
       </a>
     </div>
