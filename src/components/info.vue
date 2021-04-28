@@ -1,8 +1,7 @@
 <template>
   <div id="info" class="info">
     <p>
-      By
-      <a :href="author_site">{{ author }}</a>
+      <a :href="author_site">{{ author }}</a> © 2020-2021
     </p>
     <p>{{ description }}</p>
   </div>
@@ -18,7 +17,7 @@ export default {
     return {
     author: 'Reynard',
     author_site: 'https://quoth.win/',
-    description: 'A Katex Compatible Table Generator For Notion',
+    description: 'A Katex compatible table generator for Notion',
     notion_site: 'https://notion.so/'}
   },
 }
@@ -26,15 +25,18 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.info {
+  /* float:none; */
+  /* display: inline-block; */
+  margin: 3em 20% 1em 20%;
+  text-align: center;
+  font-size: 0.8em;
+  line-height: 0.8em;
+}
 p {
   color: #999;
 }
-a {
-  color: #1890ff;
-}
-.info {
-  text-align: right;
-  line-height: 0.8em;
-  margin: 1em 2em 0em;
-}
+/* a {
+  color: #bbb;
+} */
 </style>

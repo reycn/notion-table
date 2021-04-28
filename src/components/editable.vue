@@ -4,7 +4,7 @@
       <a-button type="secondary" icon="plus" @click="newRecord">Add row</a-button>
       <a-button type="secondary" @click="newColumn">Add column</a-button>
     </p>
-    <vue-excel-editor ref="grid" v-model="jsondata" no-footer no-header-edit>
+    <vue-excel-editor ref="grid" v-model="table_data" no-footer no-header-edit>
       <vue-excel-column v-for="attr in attrs" v-bind:key="attr" :field="attr" type="string" />
     </vue-excel-editor>
     <br />
@@ -21,7 +21,7 @@ export default {
     name: 'editable',
     data() {
         return {
-          jsondata: [
+          table_data: [
             {user: 'hc', name: 'Harry Cole',    phone: '1-415-2345678', gender: 'M', age: 25, birth: '1997-07-01'},
             {user: 'sm', name: 'Simon Minolta', phone: '1-123-7675682', gender: 'M', age: 20, birth: '1999-11-12'},
             {user: 'ra', name: 'Raymond Atom',  phone: '1-456-9981212', gender: 'M', age: 19, birth: '2000-06-11'},
