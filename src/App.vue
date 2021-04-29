@@ -142,7 +142,7 @@ import info from "./components/info.vue";
 export default {
   name: "App",
   components: {
-    info,
+    info
   },
   data() {
     return {
@@ -151,20 +151,20 @@ export default {
           user: "Alice",
           name: "HarryCole",
           phone: "1415",
-          gender: "M",
+          gender: "M"
         },
         {
           user: "Bob",
           name: "SimonMinolta",
           phone: "1123",
-          gender: "M",
+          gender: "M"
         },
         {
           user: "Caro",
           name: "RaymondAtom",
           phone: "1456",
-          gender: "M",
-        },
+          gender: "M"
+        }
       ],
       attrs: ["user", "name", "phone", "gender"],
       option_italic_head: false,
@@ -182,13 +182,13 @@ export default {
       code_end: "\\end{array}",
       contins_listen: false,
       timer: "",
-      timer_value: 0,
+      timer_value: 0
     };
   },
   methods: {
     add_row() {
       let new_row = {
-        ...this.table_data[this.table_data.length - 1],
+        ...this.table_data[this.table_data.length - 1]
       };
       this.table_data.push(new_row);
       this.refresh = false;
@@ -204,7 +204,7 @@ export default {
       }, 1);
     },
     add_col() {
-      this.attrs = Object.keys(this.table_data[0]).filter((v) => v !== "$id");
+      this.attrs = Object.keys(this.table_data[0]).filter(v => v !== "$id");
       let col_name = "Col " + (this.attrs.length + 1);
 
       function add_attr(item) {
@@ -213,7 +213,7 @@ export default {
       }
 
       this.table_data = Object.assign(this.table_data.map(add_attr));
-      this.attrs = Object.keys(this.table_data[0]).filter((v) => v !== "$id");
+      this.attrs = Object.keys(this.table_data[0]).filter(v => v !== "$id");
       // console.log(this.attrs)
       // this.json_to_code();
       this.refresh = false;
@@ -222,7 +222,7 @@ export default {
       }, 1);
     },
     del_col() {
-      this.attrs = Object.keys(this.table_data[0]).filter((v) => v !== "$id");
+      this.attrs = Object.keys(this.table_data[0]).filter(v => v !== "$id");
       let last_attr = this.attrs[this.attrs.length - 1];
       // console.log(this.attrs[this.attrs.length-1])
       function del_attr(item) {
@@ -232,7 +232,7 @@ export default {
       // console.log( this.table_data.map(del_attr))
       // console.log( typeof(this.table_data.map(del_attr)))
       this.table_data = Object.assign(this.table_data.map(del_attr));
-      this.attrs = Object.keys(this.table_data[0]).filter((v) => v !== "$id");
+      this.attrs = Object.keys(this.table_data[0]).filter(v => v !== "$id");
       // console.log(this.attrs)
 
       this.refresh = false;
@@ -250,13 +250,13 @@ export default {
     switch_border() {
       this.option_vertical_border = !this.option_vertical_border;
     },
-    clean_id: function (obj) {
+    clean_id: function(obj) {
       let tmp = Object.assign(obj);
       delete tmp.$id;
       // return JSON.stringify(tmp)
       return tmp;
     },
-    json_to_code: function () {
+    json_to_code: function() {
       this.code = "";
       this.code += this.code_begin;
       if (this.option_vertical_border) {
@@ -291,7 +291,7 @@ export default {
       }
       this.code += this.code_end;
     },
-    copy_to_clipboard: function () {
+    copy_to_clipboard: function() {
       try {
         navigator.clipboard.writeText(this.code);
         this.msg_content = "Copied!";
@@ -308,33 +308,33 @@ export default {
         console.error("Failed to copy: ", err);
       }
     },
-    continuous_listen: function () {
+    continuous_listen: function() {
       // this.timer_value ++;
       this.contins_listen = this.table_data;
       this.table_data = {};
       this.table_data = this.contins_listen;
-    },
+    }
   },
   watch: {
-    table_data: function () {
+    table_data: function() {
       this.json_to_code();
     },
-    option_bold_head: function () {
+    option_bold_head: function() {
       this.json_to_code();
     },
-    option_vertical_border: function () {
+    option_vertical_border: function() {
       this.json_to_code();
     },
-    option_italic_head: function () {
+    option_italic_head: function() {
       this.json_to_code();
     },
-    code: function () {
+    code: function() {
       this.copy_to_clipboard();
       this.code_display = this.code.split("\n").join("<br/>");
     },
-    refresh: function () {},
+    refresh: function() {}
   },
-  mounted: function () {
+  mounted: function() {
     this.json_to_code();
     this.refresh = true;
     setTimeout(() => {
@@ -344,7 +344,7 @@ export default {
   },
   beforeDestroy() {
     clearInterval(this.timer_value);
-  },
+  }
 };
 </script>
 
@@ -592,6 +592,13 @@ button {
   background-color: #f9f9f9;
   color: lightgray;
   box-shadow: 0px 1px 2px rgb(15 15 15 / 10%), inset 0 0 0 1px lightgray;
+}
+
+.button-group .disabled:hover {
+  background-color: #fdf5f2;
+  color: #eb5757;
+  box-shadow: 0px 1px 2px rgb(15 15 15 / 10%),
+    inset 0 0 0 1px rgb(235 87 87 / 30%);
 }
 
 .button-icon {
