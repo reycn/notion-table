@@ -9,18 +9,19 @@
 
 <script>
 export default {
-  name: 'info',
+  name: "info",
   props: {
     msg: String
-  },   
-  data () {
-    return {
-    author: 'Reynard',
-    author_site: 'https://quoth.win/',
-    description: 'A Katex compatible table generator for Notion',
-    notion_site: 'https://notion.so/'}
   },
-}
+  data() {
+    return {
+      author: "Reynard",
+      author_site: "https://quoth.win/",
+      description: "A Katex compatible table generator for Notion",
+      notion_site: "https://notion.so/"
+    };
+  }
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
