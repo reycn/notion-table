@@ -15,12 +15,8 @@ This tool is used to enhancing notion writting experience.
 - Two-way data binding
 - Responsive design
 
-## Screenshots
-
-- Interface:
-  ![](https://github.com/reycn/notion-table/blob/master/img/preview.png?raw=true)
-- Result in notion:
-  ![](https://github.com/reycn/notion-table/blob/master/img/notion.jpg?raw=true)
+## At a glance  
+  ![](https://github.com/reycn/notion-table/blob/master/img/preview.gif?raw=true)
 
 ## Donation
 

@@ -24,12 +24,8 @@
 - 双向数据绑定
 - 自适应布局
 
-## 截图
-
-- 界面:
-  ![](https://cdn.jsdelivr.net/gh/reycn/notion-table/img/preview.png)
-- Notion 效果:
-  ![](https://github.com/reycn/notion-table/blob/master/img/notion.jpg?raw=true)
+## 先看看
+  ![](https://github.com/reycn/notion-table/blob/master/img/preview.gif?raw=true)
 
 ## 捐赠
 
