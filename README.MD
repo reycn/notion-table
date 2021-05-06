@@ -29,4 +29,3 @@ I would appreciate your support. 😀
 ---
 
 To find more information? You may want to see [the author's blog](https://quoth.win/).
-Hosted on GitHub.
