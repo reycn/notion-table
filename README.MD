@@ -14,18 +14,17 @@ This tool is used to enhancing notion writting experience.
 - Two-way data binding
 - Responsive design
 
+## Technical Details
+
+- Framemwork: [Vue](https://github.com/vuejs/vue)
+- Table editor: [vue-excel-editor](https://github.com/cscan/vue-excel-editor)
+- KaTeX rendering: [vue-katex](https://github.com/lucpotage/vue-katex)
+
 ## Donation
 
 I would appreciate your support. 😀
 
 <img src="https://github.com/reycn/notion-table/blob/master/img/donate.jpg?raw=true" width="120">
-
-## Dependencies
-
-- Framemwork: [Vue](https://github.com/vuejs/vue)
-- KaTeX rendering: [vue-katex](https://github.com/lucpotage/vue-katex)
-- Table editor: [vue-excel-editor](https://github.com/cscan/vue-excel-editor)
-- UI elements: [ant-design-vue](https://github.com/vueComponent/ant-design-vue)
 
 ---
 

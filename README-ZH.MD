@@ -25,17 +25,16 @@
 - 双向数据绑定
 - 自适应布局
 
+## 技术细节
+
+- 前端框架: [Vue](https://github.com/vuejs/vue)
+- 表格编辑器: [vue-excel-editor](https://github.com/cscan/vue-excel-editor)
+- KaTeX 渲染: [vue-katex](https://github.com/lucpotage/vue-katex)
+
 ## 捐赠
 
 衷心感谢您的帮助。 😀  
 <img src="https://github.com/reycn/notion-table/blob/master/img/donate.jpg?raw=true" width="120">
-
-## 依赖
-
-- 前端框架: [Vue](https://github.com/vuejs/vue)
-- KaTeX 渲染: [vue-katex](https://github.com/lucpotage/vue-katex)
-- 表格编辑器: [vue-excel-editor](https://github.com/cscan/vue-excel-editor)
-- 界面元素: [ant-design-vue](https://github.com/vueComponent/ant-design-vue)
 
 ---
 
