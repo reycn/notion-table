@@ -29,8 +29,8 @@
 
 ## 捐赠
 
-衷心感谢您的帮助。 😀
-![](https://github.com/reycn/notion-table/blob/master/img/donate.jpg?raw=true)
+衷心感谢您的帮助。 😀  
+<img src="https://github.com/reycn/notion-table/blob/master/img/donate.jpg?raw=true" width="120">
 
 ## 依赖
 

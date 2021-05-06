@@ -21,7 +21,8 @@ This tool is used to enhancing notion writting experience.
 ## Donation
 
 I would appreciate your support. 😀
-![](https://github.com/reycn/notion-table/blob/master/img/donate.jpg?raw=true)
+
+<img src="https://github.com/reycn/notion-table/blob/master/img/donate.jpg?raw=true" width="120">
 
 ## Dependencies
 
