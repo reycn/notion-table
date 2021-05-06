@@ -11,9 +11,10 @@
 
 本工具为提高 Notion 表格编辑体验而生。
 
-## [🎈 立即使用！](https://tab.quoth.win/)
+## 先看看
+  ![](https://github.com/reycn/notion-table/blob/master/img/preview.gif?raw=true)
 
-[![Build and Deploy](https://github.com/reycn/notion-table/workflows/Build%20and%20Deploy/badge.svg)](https://github.com/reycn/notion-table/actions)
+## [🎈 立即使用！](https://tab.quoth.win/)
 
 ## 特性
 
@@ -23,9 +24,6 @@
 - 目标表格的实时预览和实时复制
 - 双向数据绑定
 - 自适应布局
-
-## 先看看
-  ![](https://github.com/reycn/notion-table/blob/master/img/preview.gif?raw=true)
 
 ## 捐赠
 

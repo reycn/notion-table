@@ -2,7 +2,9 @@
 
 This tool is used to enhancing notion writting experience.
 
-## [🎈 Start to Use!](https://tab.quoth.win/)
+## At a glance  
+  ![](https://github.com/reycn/notion-table/blob/master/img/preview.gif?raw=true)
+  ## [🎈 Start to Use!](https://tab.quoth.win/)
 
 [![Build and Deploy](https://github.com/reycn/notion-table/workflows/Build%20and%20Deploy/badge.svg)](https://github.com/reycn/notion-table/actions)
 
@@ -14,9 +16,6 @@ This tool is used to enhancing notion writting experience.
 - Instant preview & copying
 - Two-way data binding
 - Responsive design
-
-## At a glance  
-  ![](https://github.com/reycn/notion-table/blob/master/img/preview.gif?raw=true)
 
 ## Donation
 
